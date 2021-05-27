@@ -14,11 +14,11 @@ export const getUser = (searchValue) => {
     }
 }
 
-export const getRepos = (reposUrl) => {
-    console.log(reposUrl)
+export const getRepos = (userName) => {
+    console.log(userName)
     return async (dispatch) => {
         dispatch(setIsFetching(true));
-        const response = await axios.get(`${reposUrl}`);
+        const response = await axios.get(`${url}users/${userName}/repos`);
         dispatch(setRepos(response.data));
         dispatch(setIsFetching(false));
     }
