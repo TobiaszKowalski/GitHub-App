@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import SearchBar from './components/SearchBar/SearchBar';
 import ReposList from './components/ReposList/ReposList';
 import Preloader from './components/Preloader/Preloader';
 
-const App = () => {
-  const dispatch = useDispatch();
-  const isFetching = useSelector(state => state.repos.isFetching);
+const App = (props) => {
 
+  const isFetching = useSelector(state => state.user.isFetching);
 
   return (
     <BrowserRouter>

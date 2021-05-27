@@ -4,12 +4,12 @@ import ReposItem from './ReposItem/ReposItem';
 import './RepoList.css';
 
 const ReposList = () => {
-
+    
     const repos = useSelector(state => state.repos.items);
 
     return (
         <div className = 'reposList'>
-            {repos.map(repo => <ReposItem key = {repo.id} repo = {repo.repos_url} />)}
+            {repos.map(repo => <ReposItem key = {repo.id} repo = {repo} />)}
         </div>
     )
 }
