@@ -1,0 +1,25 @@
+const SET_REPOS= 'SET_REPOS';
+
+
+const initialState = {
+    items: [],
+};
+
+const reposReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case SET_REPOS: 
+            return {
+                ...state,
+                items: action.payload.items
+            }  
+        default:
+            return state;
+    }
+};
+
+export const setRepos = (repos) => ({
+    type: SET_REPOS, 
+    payload: repos
+});
+
+export default reposReducer
