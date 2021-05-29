@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser, getRepos } from '../../API/api';
+import { getUser, getRepos, getFollowers, getFollowing } from '../../API/api';
 import { setLoad } from '../../store/reducers/reposReducer';
 import gitHubLogo from '../../assets/github-logo.svg';
 import './SearchBar.css';
@@ -26,8 +26,9 @@ const SearchBar = () => {
     }
 
     useEffect(() => {
-        console.log(user)
         if (!isLoaded && user[0]) {
+            dispatch(getFollowers(user[0].login))
+            dispatch(getFollowing(user[0].login))
             dispatch(getRepos(user[0].login))
             dispatch(setLoad(true))
         } else {

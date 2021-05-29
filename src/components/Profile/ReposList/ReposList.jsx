@@ -9,7 +9,8 @@ const ReposList = () => {
 
     return (
         <div className = 'reposList'>
-            {repos.map(repo => <ReposItem key = {repo.id} repo = {repo} />)}
+            <span>{`Repositories (${repos.length})`}</span>
+            <div>{repos.map(repo => <ReposItem key = {repo.id} repo = {repo} />)}</div>
         </div>
     )
 }
