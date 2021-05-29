@@ -1,5 +1,6 @@
 const SET_REPOS = 'SET_REPOS';
 const SET_LOAD = 'SET_LOAD';
+const CLEAN_REPOS_STATE = 'CLEAN_REPOS_STATE';
 
 
 const initialState = {
@@ -19,6 +20,12 @@ const reposReducer = (state = initialState, action) => {
                 ...state,
                 isLoaded: action.payload
             }  
+        case CLEAN_REPOS_STATE: 
+            return {
+                ...state,
+                items: [],
+                isLoaded: false
+            }  
         default:
             return state;
     }
@@ -27,6 +34,10 @@ const reposReducer = (state = initialState, action) => {
 export const setRepos = (repos) => ({
     type: SET_REPOS, 
     payload: repos
+});
+
+export const cleanReposState = () => ({
+    type: CLEAN_REPOS_STATE
 });
 
 export const setLoad = (boolean) => ({
