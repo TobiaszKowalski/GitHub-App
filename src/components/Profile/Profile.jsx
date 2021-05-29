@@ -4,17 +4,28 @@ import ReposList from './ReposList/ReposList';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import InitialScreen from './InitialScreen/InitialScreen';
 import UserNotFound from './UserNotFound/UserNotFound';
+import ReposNotFound from './ReposNotFound/ReposNotFound';
 import './Profile.css';
 
 
 const Profile = () => {
 
     const user = useSelector(state => state.user);
+    const repos = useSelector(state => state.repos);
 
     if (!user.isUserFound) {
         return (
             <div className = 'container'>
                 <UserNotFound />
+            </div>
+        )
+    }
+
+    if (user.items[0] && !repos.length) {
+        return (
+            <div className = 'container'>
+                <ProfileInfo />
+                <ReposNotFound />
             </div>
         )
     }
