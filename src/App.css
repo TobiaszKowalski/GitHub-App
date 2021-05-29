@@ -1,8 +1,10 @@
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
 }
 
 .wrapper {
-    width: 1080px;
+    width: 99vw;
+    background-color: #E5E5E5;
 }

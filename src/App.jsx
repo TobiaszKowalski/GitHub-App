@@ -3,7 +3,7 @@ import './App.css';
 import { useSelector } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import SearchBar from './components/SearchBar/SearchBar';
-import ReposList from './components/ReposList/ReposList';
+import Profile from './components/Profile/Profile';
 import Preloader from './components/Preloader/Preloader';
 
 const App = (props) => {
@@ -17,7 +17,7 @@ const App = (props) => {
         {
           isFetching === true 
           ? <Preloader />
-          : <Route path = '/' component = {ReposList} />
+          : <Route path = '/' component = {Profile} />
         }
       </div>
     </BrowserRouter>
