@@ -6,14 +6,9 @@ const ProfileInfo = () => {
 
     const user = useSelector(state => state.user);
 
-
     const [state, setState] = useState('')
     const [followers, setFollowers] = useState([])
     const [following, setFollowing] = useState([])
-
-    console.log(user)
-    console.log(followers)
-    console.log(following)
 
     useEffect(() => {
         if (user) {

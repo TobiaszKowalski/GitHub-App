@@ -1,4 +1,35 @@
 .reposList {
     width: 1080px;
 }
+.pagination {
+    margin: 15px auto;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    outline: none;
+}
+.pagination > .active > a {
+    background-color: #0064EB;
+    border-radius: 3px;
+    color: #fff;
+}
+.pagination > li > a {
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+}
+.next:hover path {
+    transition: 0.2s ease;
+    stroke:#0064EB;
+}
+.previous:hover path {
+    transition: 0.2s ease;
+    fill:#0064EB;
+}
+
+.pagination > li > a, .pagination > li > span{
+    color: #808080;
+}
+
+
 

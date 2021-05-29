@@ -42,7 +42,7 @@ export const getFollowing = (userName) => {
 export const getRepos = (userName) => {
     return async (dispatch) => {
         dispatch(setIsFetching(true));
-        const response = await axios.get(`${url}users/${userName}/repos`);
+        const response = await axios.get(`${url}users/${userName}/repos?sort=updated&per_page=50`);
         dispatch(setRepos(response.data));
         dispatch(setIsFetching(false));
     }

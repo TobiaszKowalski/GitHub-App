@@ -11,7 +11,9 @@ import './Profile.css';
 const Profile = () => {
 
     const user = useSelector(state => state.user);
-    const repos = useSelector(state => state.repos);
+    const repos = useSelector(state => state.repos.items);
+
+    console.log(repos)
 
     if (!user.isUserFound) {
         return (
@@ -21,7 +23,7 @@ const Profile = () => {
         )
     }
 
-    if (user.items[0] && !repos.length) {
+    if (user.items[0] && repos.length === 0) {
         return (
             <div className = 'container'>
                 <ProfileInfo />
