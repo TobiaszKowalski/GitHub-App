@@ -30,8 +30,10 @@ const ReposList = () => {
 
     return (
         <div className = 'reposList'>
-            <span>{`Repositories (${repos.length})`}</span>
-            <div>{data.slice(offset, offset + PER_PAGE).map(repo => <ReposItem key = {repo.id} repo = {repo} />)}</div>
+            <div className = 'headerText'>
+                <span>{`Repositories (${repos.length})`}</span>
+                <div className = 'list'>{data.slice(offset, offset + PER_PAGE).map(repo => <ReposItem key = {repo.id} repo = {repo} />)}</div>
+            </div>
             <ReactPaginate
                 previousLabel={PREV_ARROW}
                 nextLabel={NEXT_ARROW}

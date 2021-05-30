@@ -22,13 +22,13 @@ const ProfileInfo = () => {
 
     return (
         <div className = 'profileWrapper'>
-            <div>
+            <div className = 'userAvatarContainer'>
                 <img className = 'userAvatar' src={state ? state.avatar_url : 'avatar_url'} alt='' />
             </div>
-            <div>
+            <div className='loginContainer'>
                 <a href = {state ? state.html_url : 'html_url'} target = '_blank'>{state ? state.login : 'login'}</a>
             </div>
-            <div>
+            <div className='followersContainer'>
                 <div>{followers.length}</div>
                 <div>{following.length}</div>
             </div>

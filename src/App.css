@@ -1,8 +1,11 @@
 body {
     margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .wrapper {
-    width: 99vw;
     background-color: #E5E5E5;
+}
+.wrapper a {
+    text-decoration: none;
 }

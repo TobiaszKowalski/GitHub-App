@@ -1,5 +1,16 @@
 .reposList {
-    width: 1080px;
+    width: 60%;
+    margin-left: 5%;
+    justify-content: flex-end;
+}
+
+.list {
+    margin-top: 29px;
+}
+.headerText span {
+    font-weight: 600;
+    font-size: 32px;
+    color: black;
 }
 .pagination {
     margin: 15px auto;
