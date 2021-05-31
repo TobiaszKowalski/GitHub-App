@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     height: 72px;
-    width: 100vw;
+    width: 100%;
 }
 
 img {
@@ -26,3 +26,25 @@ input {
     font-family: Inter;
     font-size: 14px;
 }
+
+@media screen and (max-width: 650px) {
+    form {
+        width: 100%;
+    }
+
+    input {
+        margin-left: 20px;
+        width: 66%;
+        height: 40px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        padding-left: 40px;
+        background: url(../../assets/search.svg) no-repeat center left;
+        background-color: #fff;
+        background-size: 18px 18px;
+        background-position: 12px 50%;
+        font-family: Inter;
+        font-size: 14px;
+    }
+}    

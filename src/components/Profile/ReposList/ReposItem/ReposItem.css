@@ -3,8 +3,8 @@
     padding: 24px;
     margin-bottom: 24px;
     background-color: white;
-    min-width: 877px;
     height: 60px;
+    overflow: hidden;
 }
 
 .repoName {
@@ -18,4 +18,5 @@
     line-height: 29px;
     color: #0064EB;
 }
+
 

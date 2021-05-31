@@ -7,9 +7,9 @@ const ReposItem = (props) => {
     return (
         <div className = 'item'>
             <div className='repoName'>
-                <a href = {repo.html_url} target = '_blank'>{repo.name}</a>
+                <a href = {repo.html_url} target = '_blank' rel='noreferrer'>{repo.name}</a>
             </div>
-            <p className='repoDescription'>{repo.description}</p>
+            <p>{repo.description}</p>
         </div>
     )
 }

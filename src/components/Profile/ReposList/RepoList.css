@@ -1,6 +1,8 @@
 .reposList {
-    width: 60%;
+    width: 100%;
+    height: 100%;
     margin-left: 5%;
+    margin-right: 2%;
     justify-content: flex-end;
 }
 
@@ -45,5 +47,20 @@
     color: #808080;
 }
 
+@media screen and (max-width: 650px) {
+    .reposList {
+        width: 90%;
+        height: 100%;
+        margin-left: 5%;
+        margin-right: 2%;
+        justify-content: flex-end;
+    }
+
+    .content span {
+        font-weight: 600;
+        font-size: 25px;
+        color: black;
+    }
+}
 
 

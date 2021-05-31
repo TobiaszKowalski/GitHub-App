@@ -25,7 +25,7 @@ const ReposList = () => {
     const offset = currentPage * PER_PAGE;
     const pageCount = Math.ceil(data.length / PER_PAGE);
 
-    useEffect(() => setData(repos), [])
+    useEffect(() => setData(repos), [repos])
 
     return (
         <div className = 'reposList'>

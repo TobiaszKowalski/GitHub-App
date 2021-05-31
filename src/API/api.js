@@ -23,7 +23,7 @@ export const getUser = (searchValue) => {
 export const getFollowers = (userName) => {
     return async (dispatch) => {
         dispatch(setIsFetching(true));
-        const response = await axios.get(`${url}users/${userName}/followers`);
+        const response = await axios.get(`${url}users/${userName}/followers?per_page=100`);
         dispatch(setFollowers(response.data));
         dispatch(setIsFetching(false));
     }
@@ -32,7 +32,7 @@ export const getFollowers = (userName) => {
 export const getFollowing = (userName) => {
     return async (dispatch) => {
         dispatch(setIsFetching(true));
-        const response = await axios.get(`${url}users/${userName}/following`);
+        const response = await axios.get(`${url}users/${userName}/following?per_page=100`);
         dispatch(setFollowing(response.data));
         dispatch(setIsFetching(false));
     }
@@ -41,7 +41,7 @@ export const getFollowing = (userName) => {
 export const getRepos = (userName) => {
     return async (dispatch) => {
         dispatch(setIsFetching(true));
-        const response = await axios.get(`${url}users/${userName}/repos?sort=updated&per_page=50`);
+        const response = await axios.get(`${url}users/${userName}/repos?sort=updated&per_page=100`);
         dispatch(setRepos(response.data));
         dispatch(setIsFetching(false));
     }

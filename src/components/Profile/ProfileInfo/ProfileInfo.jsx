@@ -26,7 +26,7 @@ const ProfileInfo = () => {
                 <img className = 'userAvatar' src={state ? state.avatar_url : 'avatar_url'} alt='' />
             </div>
             <div className='loginContainer'>
-                <a href = {state ? state.html_url : 'html_url'} target = '_blank'>{state ? state.login : 'login'}</a>
+                <a href = {state ? state.html_url : 'html_url'} target = '_blank' rel='noreferrer'>{state ? state.login : 'login'}</a>
             </div>
             <div className='followersContainer'>
                 <div className='followers'>
