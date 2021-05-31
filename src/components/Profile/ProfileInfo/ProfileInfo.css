@@ -1,0 +1,66 @@
+.userAvatar {
+    border-radius: 50%;
+    margin: 0;
+    width: 280px;
+    height: 280px;
+}
+
+.profileWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 56px;
+}
+
+.userAvatarContainer {
+    margin-bottom: 30px;
+}
+.loginContainer {
+    margin-bottom: 30px;
+}
+
+.loginContainer a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+    color: #0064EB;
+}
+
+.followersContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.followersContainer svg {
+    margin-right: 10px;
+}
+
+
+
+.following {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .userAvatar {
+        border-radius: 50%;
+        margin: 0;
+        width: 200px;
+        height: 200px;
+    }
+
+    .profileWrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .followersContainer {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+    }
+}    
+
