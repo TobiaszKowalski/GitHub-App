@@ -1,9 +1,10 @@
 import React from 'react';
+import style from './Preloader.module.css';
 
 let Preloader = (props) => {
     return (
-        <div>
-            <img src='https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif' alt=''/>
+        <div className = {style.wrapper}>
+            <img className = {style.content} src='https://i.gifer.com/ZZ5H.gif' alt=''/>
         </div>
     )
 }

@@ -9,7 +9,6 @@ export const getUser = (searchValue) => {
     return async (dispatch) => {
         dispatch(setIsFetching(true));
         const response = await axios.get(`${url}search/users?q=${searchValue}`);
-        console.log(response);
         dispatch(cleanUserState());
         dispatch(cleanReposState());
         if (!response.data.total_count) {

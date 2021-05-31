@@ -9,7 +9,7 @@ const ReposItem = (props) => {
             <div className='repoName'>
                 <a href = {repo.html_url} target = '_blank'>{repo.name}</a>
             </div>
-            <div className='repoDescription'>{repo.description}</div>
+            <p className='repoDescription'>{repo.description}</p>
         </div>
     )
 }

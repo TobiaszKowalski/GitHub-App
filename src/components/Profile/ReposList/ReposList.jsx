@@ -17,7 +17,6 @@ const ReposList = () => {
 
     const [currentPage, setCurrentPage] = useState(0);
     const [data, setData] = useState([]);
-    
     const repos = useSelector(state => state.repos.items);
 
     const handlePageClick = ({ selected: selectedPage }) => {
@@ -30,7 +29,7 @@ const ReposList = () => {
 
     return (
         <div className = 'reposList'>
-            <div className = 'headerText'>
+            <div className = 'content'>
                 <span>{`Repositories (${repos.length})`}</span>
                 <div className = 'list'>{data.slice(offset, offset + PER_PAGE).map(repo => <ReposItem key = {repo.id} repo = {repo} />)}</div>
             </div>

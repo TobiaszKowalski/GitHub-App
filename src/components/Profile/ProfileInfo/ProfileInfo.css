@@ -4,10 +4,11 @@
 }
 
 .profileWrapper {
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    margin-left: 56px;
 }
 
 .userAvatarContainer {
@@ -17,6 +18,25 @@
     margin-bottom: 30px;
 }
 
+.loginContainer a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+    color: #0064EB;
+}
+
 .followersContainer {
     display: flex;
+    justify-content: flex-start;
+}
+
+.followersContainer svg {
+    margin-right: 10px;
+}
+
+
+
+.following {
+    margin-left: 20px;
 }

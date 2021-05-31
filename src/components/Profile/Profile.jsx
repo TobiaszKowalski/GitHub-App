@@ -13,8 +13,6 @@ const Profile = () => {
     const user = useSelector(state => state.user);
     const repos = useSelector(state => state.repos.items);
 
-    console.log(repos)
-
     if (!user.isUserFound) {
         return (
             <div className = 'container'>
